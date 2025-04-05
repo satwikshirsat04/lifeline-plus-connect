@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Healthcare specific colors
+				medical: {
+					DEFAULT: '#0073E6',
+					light: '#E6F2FF',
+					dark: '#005BB8',
+				},
+				emergency: {
+					DEFAULT: '#FF3B30',
+					light: '#FFE5E5',
+					dark: '#CC2F26',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +96,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-sos': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						boxShadow: '0 0 0 0 rgba(255, 59, 48, 0.7)'
+					},
+					'70%': {
+						transform: 'scale(1.05)',
+						boxShadow: '0 0 0 15px rgba(255, 59, 48, 0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-sos': 'pulse-sos 2s infinite'
 			}
 		}
 	},
